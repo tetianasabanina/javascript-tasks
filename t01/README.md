@@ -1,5 +1,4 @@
-Sprintti 1: JavaScript perusteita ja DOM
-========================================
+# JavaScript perusteita ja DOM
 
 JavaScript-ohjelma voi HTML-DOM-olioiden (_Document Object Model_) kautta muuttaa
 muuttaa sivun HTML-sisältöä ja CSS-tyylejä. Ensin on kuitenkin haettava olio,
@@ -16,8 +15,7 @@ JavaScript-koodarin pitääkin jatkuvasti pitää konsoli-ikkuna näkyvissä.
 Lisämällä konsolitulostuksia ohjelmaasi voit helposti ja nopeasti tehdä omassa
 koodissasi tapahtuvia asioita näkyviksi.
 
-Ohjelmointitehtävä
-------------------
+## Ohjelmointitehtävä
 
 Tehtävän pohjassa `laskuri.html` on elementti, jonka `id` on laskuri. Muokkaa pohjan
 JavaScript –ohjelmaa niin, että se kasvattaa laskurin arvoa jokaisella numeron
@@ -27,8 +25,7 @@ Lisää ohjelmaan toiminnallisuus, jolla laskurin tausta on parillisilla arvoill
 
 Laskurisivun saa tyylitellä aivan vapaasti niin hienoksi kuin osaa!
 
-Kysymyksiä
-----------
+## Kysymyksiä
 
 1.  Tee ohjeet, miten selaimen konsolin löytää eri selaimissa (IE, Firefox,
     Chrome). Miten konsoliin tulostetaan JavaScriptissa?
@@ -53,11 +50,9 @@ Kysymyksiä
     ihan samat kuin CSS-syntaksissa. Muunnokseen on yksinkertaiset säännöt,
     selvitä ne ja anna esimerkit muunnoksista.
 
-Bonustehtäviä
--------------
+## Bonustehtäviä
 
-Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä
-positiivisesti arvioinnissa.
+Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä lisääntyneenä oppimisena.
 
 1.  Nollausnappula: Lisää sivulle nollausta varten nappula-elementti, määrittele
     funktio, joka nollaa laskurin, aseta funktio uuden elementin
@@ -71,9 +66,7 @@ positiivisesti arvioinnissa.
 <img src="media/b30f9c36069516c2633d259f3e5efee5.png" width="200px"/>
 <img src="media/288b4e6b10bad439c0e467e77a0f210c.png" width="210px"/>
 
-
-Palautus
---------
+## Palautus
 
 -   Dokumentti, jossa ryhmän nimi, ryhmän jäsenten nimet, vastaukset kaikkiin
     kysymyksiin
@@ -87,8 +80,7 @@ Palautus
 >   saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse
 >   siitäkin.
 
-Vinkkejä
---------
+## Vinkkejä
 
 -   Kurssin hakemistossa on pohja sprintin ohjelmointitehtävään. Pohjan koodin
     kommentit antavat osviittaa ratkaisun laatimiseen, lue pohja ajatuksella!

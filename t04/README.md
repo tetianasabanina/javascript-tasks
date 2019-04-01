@@ -1,5 +1,4 @@
-Reaktiopeli
-===========
+# Reaktiopeli
 
 <img src="media/5e7a8461c064adb51984e7e962530b49.jpg" width=400px>
 
@@ -9,8 +8,8 @@ pelin. Nappuloiden vaihtumisnopeus kiihtyy jatkuvasti.
 (https://www.youtube.com/watch?v=nv_Wfhz38EM).
 
 
-Perusversio
------------
+## Perusversio
+
 <img src="media/14324402efc487bcccc4010a7a34af9e.png" width=400px>
 
 Pelin perusversiossa ei tarvitse olla muistia, nappulaa on siis ehdittävä painaa
@@ -25,8 +24,7 @@ Tehtäväpohjassa on kolmen nappulan pelin runko, jolla pääset suoraan
 toteuttamaan pelin logiikkaa, sillä perustoiminnallisuuden palaset ovat jo
 olemassa.
 
-Tehtävät
---------
+## Tehtävät
 
 1.  Toteuta peli. Kuten aina, saat tyylitellä sivun miten haluat ja tehdä
     lisäominaisuuksia, esim. järisyttävät Game over –animaatiot tai -fanfaarit
@@ -60,8 +58,7 @@ Tehtävät
     metodia lisää, jotka mielestäsi ovat hyödyllisiä. Selitä kustakin lyhyesti,
     mitä metodi tekee.
 
-Vinkkejä
---------
+## Vinkkejä
 
 -   Tehtävässä tarvitaan taulukoita. Jos ei niitä tunne, kannattaa ensin
     perehtyä hieman asiaan.
@@ -81,8 +78,7 @@ Vinkkejä
 
 -   Älä kopioi jostain googlelöydöksestä koodia, jota et ymmärrä!
 
-Variaatioita
-------------
+## Variaatioita
 
 ### Edistynyt versio
 
@@ -90,7 +86,7 @@ Alkuperäisessä reaktiopelissä ei ole väliä, milloin painat nappulaa, kunhan
 painallukset tulevat oikeassa järjestyksessä. Pelaaja voi siis jäädä jälkeen
 nappuloiden vaihtumisista. Tämä on oikeastaan pelaajalle aika vaikeaa.
 
-PAremman pelikokemuksen saat, kun toteutat peliin muistin, joka muistaa kymmenen viimeisintä
+Paremman pelikokemuksen saat, kun toteutat peliin muistin, joka muistaa kymmenen viimeisintä
 nappulaa edellisen painalluksen jälkeen. Pelaaja saa pisteitä, jos painaa
 nappuloita oikeassa järjestyksessä ja peli loppuu väärään painallukseen tai
 siihen, että muisti tulee täyteen, pelaaja on siis yli kymmenen painallusta

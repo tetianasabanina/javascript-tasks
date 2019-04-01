@@ -1,5 +1,4 @@
-Sprintti 3: HTML5, CSS ja JavaScript
-====================================
+# HTML5, CSS ja JavaScript
 
 HTML5, CSS3 ja JavaScript ovat yhdessä dynaaminen trio. Niillä saa kehiteltyä
 hämmästyttävän hienoja juttuja hyvinkin pienellä ohjelmoinnilla, jos vain tietää
@@ -24,8 +23,7 @@ CSS-ominaisuuksien osalta. Niitä voit tarkistaa esim. sivustolta
 <http://caniuse.com> . Sivustolla <http://doiuse.herokuapp.com/> voit tarkistaa,
 käytätkö ominaisuuksia, jotka eivät toimi yleisesti käytössä olevilla selaimilla
 
-Ohjelmointitehtävä
-------------------
+## Ohjelmointitehtävä
 
 Ohjelmointitehtävänä on toteuttaa rumpusetti, jota voi soittaa näppäimistöllä.
 
@@ -146,8 +144,7 @@ JavaScript-kurssiin nimeltä JavaScript30. Jos edellä oleva selitys tuntui liia
 pitkältä, voit rekisteröityä kurssille osoitteessa <https://javascript30.com/>
 ja ratkaista tehtävän itsensä Wesin opastamana.
 
-Kysymyksiä
-----------
+## Kysymyksiä
 
 ![](media/4db8296b1b97a7a7d42af5b422f59316.png)
 
@@ -187,19 +184,16 @@ Kysymyksiä
     mielestäsi kiinnostavaa HTML5-ominaisuutta ja kerro lyhyesti, mitä niillä
     voi tehdä.
 
-Bonustehtäviä
--------------
+## Bonustehtäviä
 
-Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä
-positiivisesti arvioinnissa.
+Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä lisääntyneenä oppimisena.
 
 Jos kokeilit rumpusettiä puhelimella, huomasit varmaankin, että se ei toimi,
 koska puhelimessa ei ole näppäimistöä eikä keydown-eventtejä synny. Tee
 rumpusetistä myös hiirellä soitettava, jolloin se toimii ainakin joillain
 mobiiliselaimilla.
 
-Vinkkejä
---------
+## Vinkkejä
 
 -   Kuten tekstistä jo selvisi, ohjelmointiharjoitus kuuluu ilmaiseen
     JavaScript-kurssiin nimeltä JavaScript30. Voit rekisteröityä kurssille

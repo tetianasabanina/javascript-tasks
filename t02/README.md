@@ -1,5 +1,4 @@
-Sprintti 2: Ohjelmoinnin perusteita
-===================================
+# Ohjelmoinnin perusteita
 
 JavaScript on yleiskäyttöinen ohjelmointikieli siinä kuin moni muukin kuten
 esim. Java, C++, C\#, Python, PHP yms. Ohjelmoinnin perusrakenteet ovat hyvin
@@ -12,8 +11,7 @@ Nyt tavoitteena on tutustua muutamaan keskeiseen rakenteeseen JavaScriptissa,
 jotta pääset ohjelmoinnissa eteenpäin kohti mielenkiintoisempien ohjelmien
 toteutusta ja pystyt paremmin itse opiskelemaan lisää.
 
-Ohjelmointitehtävä
-------------------
+## Ohjelmointitehtävä
 
 Tehtävänä on klassinen ohjelmointiharjoitus numeronarvauspeli. Arvattava numero
 arvotaan väliltä 0-100. Pelaajan annettua arvauksensa peli kertoo, onko
@@ -32,8 +30,7 @@ numerot nollasta oikeaan vastaukseen.
 
 Pelin saa tyylitellä aivan vapaasti niin hienoksi kuin osaa!
 
-Kysymyksiä
-----------
+## Kysymyksiä
 
 1.  Selitä
 
@@ -61,11 +58,9 @@ Kysymyksiä
 
     -   mikä on funktion paluuarvo ja miten se asetetaan.
 
-Bonustehtäviä
--------------
+## Bonustehtäviä
 
-Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä
-positiivisesti arvioinnissa.
+Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä lisääntyneenä oppimisena.
 
 1.  Pelin uudelleenkäynnistys: Lisää sivulle nollausta varten jokin sopiva
     elementti, määrittele funktio, joka alustaa pelin uudelleen ja aseta funktio
@@ -84,8 +79,7 @@ positiivisesti arvioinnissa.
     Lisää ohjelmaan palkin päivitys sitä mukaa, kun pelaajan arvaukset etenevät
     vääjäämättä kohti oikeaa vastausta.
 
-Palautus
---------
+## Palautus
 
 -   Dokumentti, jossa ryhmän nimi, ryhmän jäsenten nimet, vastaukset kaikkiin
     kysymyksiin
@@ -99,8 +93,7 @@ Palautus
 >   saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse
 >   siitäkin.
 
-Vinkkejä
---------
+## Vinkkejä
 
 -   Kurssin hakemistossa on pohja sprintin ohjelmointitehtävään. Pohjan koodin
     kommentit antavat osviittaa ratkaisun laatimiseen, lue pohja ajatuksella!

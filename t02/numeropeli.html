@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Numeropeli</title>
+        <link rel="stylesheet" type="text/css" href="numeropeli.css">  
+    </head>
+    <body>
+        <h1>Numeropeli</h1>
+        <form id="lomake">
+      		<label for="luku">Arvaa luku väliltä 0-100: </label>
+		      <input id="luku" type="text" name="luku">
+		      <button type="submit">Arvaa</button>
+	      </form>
+        <p id="alempi"></p>
+        <p id="ylempi"></p>
+        <p id="vihje"></p>
+        <p id="numerot"></p>
+
+        <div class="bar-chart">
+          <div class="bar" id="lower-bar" style="width: 0%; background-color: blue">
+            <span></span></div>
+          <div class="bar" id="middle-bar" style="width: 100%; background-color: orange">
+            <span></span></div>
+          <div class="bar" id="upper-bar" style="width: 0  %; background-color: green">
+            <span></span></div>
+        </div>
+        <script src="numeropeli.js"></script>
+    </body>
+  </html>

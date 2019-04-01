@@ -54,9 +54,22 @@ olemassa.
     // tästä rivin loppuun on kommenttia
     ```
 
-1.  Edellä tuli ilmi joitakin `Array:n metodeja. Luettele kymmenen `Array`:n
+1.  Edellä tuli ilmi joitakin `Array`:n metodeja. Luettele kymmenen `Array`:n
     metodia lisää, jotka mielestäsi ovat hyödyllisiä. Selitä kustakin lyhyesti,
     mitä metodi tekee.
+
+## Palautus
+
+-   Dokumentti, jossa ryhmän nimi, ryhmän jäsenten nimet, vastaukset kaikkiin
+    kysymyksiin
+
+-   Linkki esittelysivustolle, jolla linkki toimivaan ohjelmaan web-palvelimella.
+
+Arvioi vastauksesi tekstikentässä omaa panostasi lopputuloksen
+saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse siitäkin.
+
+>   Vaikka tulokset olisikin tehty tiimityönä, jokainen lähettää
+>   erillisen vastauksen ja asentaa ohjelmat omaan serverihakemistoonsa! 
 
 ## Vinkkejä
 

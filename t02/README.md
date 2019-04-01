@@ -64,7 +64,7 @@ Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näky�
 
 1.  Pelin uudelleenkäynnistys: Lisää sivulle nollausta varten jokin sopiva
     elementti, määrittele funktio, joka alustaa pelin uudelleen ja aseta funktio
-    uuden elementin onclick-käsittelijäksi.
+    uuden elementin `click`-käsittelijäksi.
 
 2.  Arvausten visualisointi: Tehtäväpohjassa on ovela palkkirakennelma, jolla
     voi visualisoida arvausten tiivistymistä kohti oikeaa vastausta:
@@ -84,14 +84,13 @@ Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näky�
 -   Dokumentti, jossa ryhmän nimi, ryhmän jäsenten nimet, vastaukset kaikkiin
     kysymyksiin
 
--   Linkki esittelysivustolle, jolla linkki toimivaan ohjelmaan (omalla
-    O-levyllä)
+-   Linkki esittelysivustolle, jolla linkki toimivaan ohjelmaan web-palvelimella.
 
->   Kuten ennenkin, vaikka tulokset on tehty tiimityönä, jokainen lähettää
->   erillisen vastauksen ja asentaa ohjelmat omaan serverihakemistoonsa! Arvioi
->   vastauksesi tekstikentässä omaa panostasi sprintin lopputuloksen
->   saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse
->   siitäkin.
+Arvioi vastauksesi tekstikentässä omaa panostasi lopputuloksen
+saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse siitäkin.
+
+>   Vaikka tulokset olisikin tehty tiimityönä, jokainen lähettää
+>   erillisen vastauksen ja asentaa ohjelmat omaan serverihakemistoonsa! 
 
 ## Vinkkejä
 

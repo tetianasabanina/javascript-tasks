@@ -184,6 +184,19 @@ ja ratkaista tehtävän itsensä Wesin opastamana.
     mielestäsi kiinnostavaa HTML5-ominaisuutta ja kerro lyhyesti, mitä niillä
     voi tehdä.
 
+## Palautus
+
+-   Dokumentti, jossa ryhmän nimi, ryhmän jäsenten nimet, vastaukset kaikkiin
+    kysymyksiin
+
+-   Linkki esittelysivustolle, jolla linkki toimivaan ohjelmaan web-palvelimella.
+
+Arvioi vastauksesi tekstikentässä omaa panostasi lopputuloksen
+saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse siitäkin.
+
+>   Vaikka tulokset olisikin tehty tiimityönä, jokainen lähettää
+>   erillisen vastauksen ja asentaa ohjelmat omaan serverihakemistoonsa! 
+
 ## Bonustehtäviä
 
 Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä lisääntyneenä oppimisena.

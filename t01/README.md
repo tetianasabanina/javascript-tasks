@@ -37,15 +37,15 @@ Laskurisivun saa tyylitellä aivan vapaasti niin hienoksi kuin osaa!
 
 4.  Html-dokumentissa on seuraavanlainen elementti:  
     ```html
-    <div id="aktiivinen"\>Klikkaa mua!</div>
+    <div id="aktiivinen">Klikkaa mua!</div>
     ```  
     Anna JavaScript lauseet, joilla  
     a) haet elementtiä vastaavan dom olion  
     b) asetat elementin `click`-käsittelijäksi funktion nimeltä klikkaus  
-    c) muutat elementin html-sisällöksi ”Klikattu”  
+    c) muutat elementin html-sisällöksi ```'Klikattu'```  
     d) muutat tekstin värin harmaaksi
 
-5.  Mitä muita html-eventtejä kuin onclick JavaScript-ohjelmassa voisi
+5.  Mitä muita html-eventtejä kuin ```click``` JavaScript-ohjelmassa voisi
     käsitellä? Nimeä ja selitä lyhyesti viisi mielestäsi käyttökelpoisinta.
 
 6.  CSS-ominaisuuksia voi muuttaa JavaScriptissä, mutta niiden nimet eivät ole
@@ -56,9 +56,9 @@ Laskurisivun saa tyylitellä aivan vapaasti niin hienoksi kuin osaa!
 
 Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näkyä lisääntyneenä oppimisena.
 
-1.  Nollausnappula: Lisää sivulle nollausta varten nappula-elementti, määrittele
+1.  Nollausnappula: Lisää sivulle nollausta varten nappulaelementti, määrittele
     funktio, joka nollaa laskurin, aseta funktio uuden elementin
-    onclick-käsittelijäksi. Voit ottaa mallia ohjelmapohjasta.
+    `click`-käsittelijäksi. Voit ottaa mallia ohjelmapohjasta.
 
 2.  Painalluksen visualisointi: Kun hiiren painike on pohjassa laskuria
     klikattaessa, muuta laskurin tyylejä oheisen mallin mukaisesti. Vinkki:
@@ -76,11 +76,11 @@ Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näky�
 -   Linkki esittelysivustolle, jolla linkki toimivaan ohjelmaan (omalla
     O-levyllä)
 
->   Kuten ennenkin, vaikka tulokset on tehty tiimityönä, jokainen lähettää
->   erillisen vastauksen ja asentaa ohjelmat omaan serverihakemistoonsa! Arvioi
->   vastauksesi tekstikentässä omaa panostasi sprintin lopputuloksen
->   saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse
->   siitäkin.
+Arvioi vastauksesi tekstikentässä omaa panostasi lopputuloksen
+saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse siitäkin.
+
+>   Vaikka tulokset on tehty tiimityönä, jokainen lähettää
+>   erillisen vastauksen ja asentaa ohjelmat omaan serverihakemistoonsa! 
 
 ## Vinkkejä
 

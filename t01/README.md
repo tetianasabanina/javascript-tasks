@@ -36,10 +36,12 @@ Laskurisivun saa tyylitellä aivan vapaasti niin hienoksi kuin osaa!
 3.  Miksi JavaScript-koodi sijoitetaan yleensä erilliseen tiedostoon?
 
 4.  Html-dokumentissa on seuraavanlainen elementti:  
-    \<div id="aktiivinen"/\>Klikkaa mua!\</div\>  
+    ```html
+    <div id="aktiivinen"\>Klikkaa mua!</div>
+    ```  
     Anna JavaScript lauseet, joilla  
     a) haet elementtiä vastaavan dom olion  
-    b) asetat elementin onclick-käsittelijäksi funktion nimeltä klikkaus  
+    b) asetat elementin `click`-käsittelijäksi funktion nimeltä klikkaus  
     c) muutat elementin html-sisällöksi ”Klikattu”  
     d) muutat tekstin värin harmaaksi
 

@@ -2,12 +2,12 @@
 
 Toistorakenteet ovat yksi ohjelmoinnin perusrakenteista: jotain iteroidaan (tehdään monta kertaa) sen perusteella, onko jokin ehto tosi. Toistaminen lopetetaan, kun toistoehto ei enää ole tosi.
 
-Funktiot ovat ehkä tärkein ohjelmoinnin työkalu, niitä käytetään kaikissa ohjelmissa ajtkuvasti. Funktioilla voi olla parametrimuuttujia, jotka saavat arvonsa, kun funktiota kutsutaan. Usein funktiot palauttavat lopputuloksena jonkin arvon (paluuarvo). Lausekkeessa funktiokutsu korvautuu paluuarvollaan.
+Funktiot ovat ehkä tärkein ohjelmoinnin työkalu, niitä käytetään kaikissa ohjelmissa jatkuvasti. Funktioilla voi olla parametrimuuttujia, jotka saavat arvonsa, kun funktiota kutsutaan. Usein funktiot palauttavat lopputuloksena jonkin arvon (paluuarvo). Lausekkeessa funktiokutsu korvautuu paluuarvollaan.
 
 Tässä tehtävässä harjoitellaan molempia ohjelmoinnin kulmakiviä.
 
 ## Tehtävät
-Tehtävänäsi on toteuttaajoukko JavaScript-funktioita web-sivulle. Sivun HTML on jo valmiina, ja sivu sisältää jo toiminnot, jotka käyttävät funktioitasi. 
+Tehtävänäsi on toteuttaa joukko JavaScript-funktioita web-sivulle. Sivun HTML on jo valmiina, ja sivu sisältää jo toiminnot, jotka käyttävät funktioitasi. 
 
 Valmiina on myös funktio `println(item)`, jolla voi tulostaa yhden rivin sivulle, siis parametrin `item` arvon ja rivinvaihdon.
 
@@ -54,7 +54,7 @@ Valmiina on myös funktio `println(item)`, jolla voi tulostaa yhden rivin sivull
     ```
 
 8.  Tee funktio `lukusarjanSumma(n)`, joka palauttaa summan 1+2+3+...+n, missä `n`
-    on parametrina annettu luku. Sivu tulostaa lukujen 1-100 summa.
+    on parametrina annettu luku. Sivu tulostaa lukujen 1-100 summan.
 
 9.  Tee funktio `kertoma(n)`, joka palauttaa luvun n kertoman. Kertoma n!
     lasketaan kaavalla 1\*2\*3\*...\*n. Esimerkiksi luvun 4 kertoma on 24, eli
@@ -64,11 +64,17 @@ Valmiina on myös funktio `println(item)`, jolla voi tulostaa yhden rivin sivull
 10. Tee myös funktio `ajaKaikki()`, joka ajaa kaikki harjoituksen funktiot ja lisää väliin otsikkotulostuksia, joista
     selviää, mikä tehtävä kulloinkin on kyseessä.
 
-Tee kaikki funktiot samaan ohjelmaan. Muista kutsua funktioita, jotta nähdään,
-mitä ne tekevät!
+Tee kaikki funktiot tiedostoon `script.js`. 
+
+## Bonus
+11.	Toteuta funktio `rekursiivinenSumma(n)`, joka laskee ja palauttaa lukusarjan summan rekursiivisella algoritmilla.
+12.	Toteuta funktio `rekursiivinenKertoma(n)`, joka laskee ja palauttaa kertoman rekursiivisella algoritmilla.
+
 
 ## Palautus
 
 Palauta linkki nettisivuun.
 
 ## Ohjeita
+
+Kehityksen aikana kannattaa testata funktioita kutsumalla niitä suoraan, jotta näet, mitä ne tekevät.

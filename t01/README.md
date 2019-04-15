@@ -5,7 +5,7 @@ muuttaa sivun HTML-sisältöä ja CSS-tyylejä. Ensin on kuitenkin haettava olio
 jota haluat muuttaa. Koko dokumenttia kuvaava DOM-olio on document, dokumentin
 kaikki sisältö kuuluu siihen puurakenteena (_DOM tree_).
 
-JavaScript-ohjelma voi reagoida HTML-eventteihin (esim. `onclick`, `onmouseover`),
+JavaScript-ohjelma voi reagoida HTML-eventteihin (esim. `click`, `mouseover`),
 jos siinä asetetaan elementin eventille käsittelijä. Tyypillisesti
 käsittelijäksi määritellään JavaScript-funktio.
 
@@ -62,8 +62,8 @@ Haasta itsesi bonustehtävillä päästäksesi nextille levelille! Se voi näky�
 
 2.  Painalluksen visualisointi: Kun hiiren painike on pohjassa laskuria
     klikattaessa, muuta laskurin tyylejä oheisen mallin mukaisesti. Vinkki:
-    esimerkissä on lisätty harmaa reunus (border) ja läpinäkymättömyyttä
-    (opacity) on vähennetty.
+    esimerkissä on lisätty harmaa reunus (_border_) ja läpinäkymättömyyttä
+    (_opacity_) on vähennetty.
 
 <img src="media/b30f9c36069516c2633d259f3e5efee5.png" width="200px"/>
 <img src="media/288b4e6b10bad439c0e467e77a0f210c.png" width="210px"/>
@@ -84,9 +84,9 @@ saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse siitäkin.
 
 ## Vinkkejä
 
--   Kurssin hakemistossa on pohja sprintin ohjelmointitehtävään. Pohjan koodin
+-   Ohessa on pohja sprintin ohjelmointitehtävään. Pohjan koodin
     kommentit antavat osviittaa ratkaisun laatimiseen, lue pohja ajatuksella!
-
+    
 -   W3Schools JavaScript Tutorial on hyvä lähde:
     <http://www.w3schools.com/js/default.asp>. Jos muutamaan ensimmäiseen
     kappaleeseen tutustuu ja kokeilee esimerkkejä, perusasiat selviävät

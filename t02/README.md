@@ -94,14 +94,10 @@ saavuttamisessa ja oppimistasi. Jos jokin tuntui hankalalta, mainitse siitäkin.
 
 ## Vinkkejä
 
--   Kurssin hakemistossa on pohja sprintin ohjelmointitehtävään. Pohjan koodin
+-   Ohessa on pohja sprintin ohjelmointitehtävään. Pohjan koodin
     kommentit antavat osviittaa ratkaisun laatimiseen, lue pohja ajatuksella!
 
 -   W3Schools-tutoriaali auttaa tässäkin, mutta tämänkertaisiin kysymyksiin
     löytyy myös Mozilla Developer Networkin materiaaleista aivan erityisen osuva
     artikkeli:
     <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics>
-
--   Muista myös tämän opintojakson ohjelmointiohje ItsLearningissa, sekin voi
-    osoittautua hyödylliseksi.
-

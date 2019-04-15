@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|VT323');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#terminal {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#output {
+    background-color: white;
+    color: black;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    padding: 0.3em;
+    min-height: 5em;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0.2em 0;
+}
+
+.fn {
+    background-color: white;
+    color: black;
+    margin: 0.4em;
+    border-radius: 0.2em;
+    font-size: 1em;
+    padding: 0.3em;
+}

@@ -6,20 +6,17 @@ mitä tahtoo ja osaa käyttää niitä hyväkseen.
 
 Tässä sprintissä tutustutaan eräisiin HTML5- ja CSS-ominaisuuksiin, joilla voi
 toteuttaa dynaamisia ominaisuuksia ilman riviäkään JavaScriptia, siis ilman
-ohjelmointia. JavaScriptista taas tutustutaan mm. selainrajapintaan, siis miten
-ohjelma voi vuorovaikuttaa selaimen toimintojen kanssa DOM:in lisäksi.
+ohjelmointia. 
 
-Toisin kuin JavaScript Domain Object Model (DOM), joka on määritelty
-standardissa, Browser Object Modelille (BOM) ei ole selkeää määrittelyä vaan se
-on selainkohtainen. Onneksi kuitenkin yleisesti käytetyt selaimet ovat
-toteuttaneet sen pääosin samalla tapaa, joten useimmat ohjelmat toimivat
-kaikilla selaimilla. Selainyhteensopivuus on kuitenkin syytä tarkistaa kaikkien
+JavaScript Domain Object Model (DOM) on määritelty standardissa, mutta toteutukset vaihtelevat, ja kaikki ohjelmat eivät kuitenkaan toimi ihan samalla tavalla kaikissa selaimissa. 
+
+Selainyhteensopivuus on hyvä tarkistaa kaikkien
 käytettävien ominaisuuksien osalta varsinkin, jos on oleellista, että sivu
 toimii eri selaimilla. Muista myös selainten eri versiot, niitä on käytössä
 useita yhtaikaa!
 
-Yhteensopivuuksia on syytä varmistella myös uudempien HTML5- ja
-CSS-ominaisuuksien osalta. Niitä voit tarkistaa esim. sivustolta
+Etenkin uudempien HTML5- ja
+CSS-ominaisuuksien tuessa eri selaimissa saattaa olla eroja. Niitä voit tarkistaa esim. sivustolta
 <http://caniuse.com> . Sivustolla <http://doiuse.herokuapp.com/> voit tarkistaa,
 käytätkö ominaisuuksia, jotka eivät toimi yleisesti käytössä olevilla selaimilla
 
@@ -38,16 +35,15 @@ toiminnallisuutta:
 
 ### Näppäimistöpainallusten tunnistaminen
 
-Aloita näppäimistöpainallusten nappaamisesta. Näppäimistöpainalluksiin pääset
-kiinni selaimen ohjelmointirajapintaa (BOM) käyttäen.
+Aloita näppäimistöpainallusten nappaamisesta. Pääset näppäimistö-eventteihin pääset käsiksi `document`-olion kautta. 
 
 Selaimen näppäimistöpainallukset aiheuttavat `keydown`-eventtejä. Aseta
-selainikkunalle keydown-tapahtumankäsittelijä. Tapahtumankäsittelijä voi aluksi
+dokumentille keydown-tapahtumankäsittelijä. Tapahtumankäsittelijä voi aluksi
 vaikkapa tulostaa koko eventin tiedot konsoliin, sieltä näet, että painetun
 näppäimen voi tunnistaa eventin `keyCode`-attribuutin arvosta.
 
 ```javascript
-window.addEventListener('keydown', playSound);
+document.addEventListener('keydown', playSound);
 ```
 
 Ylläolevassa playSound on funktio, jota kutsutaan aina keydown-eventin
@@ -176,11 +172,11 @@ ja ratkaista tehtävän itsensä Wesin opastamana.
     Vihje: testiraportista pitää selvitä ainakin, millä selaimilla ja
     selainversoilla testattiin, ja jos jokin ongelma löytyi, mikä ei toiminut.
 
-3.  HTML-elementti `audio` osaa äänitiedostojen soittamisen lisäksi tarjota myös
+4.  HTML-elementti `audio` osaa äänitiedostojen soittamisen lisäksi tarjota myös
     soittimen ohjauskontrollit (play, pause, stop jne.). Kokeile soittimen
     upottamista jollekin web-sivulle ja anna linkki sivullesi.
 
-4.  Audio-elementti on HTML5-ominaisuuksista vain yksi. Esittele kolme muuta 
+5.  Audio-elementti on HTML5-ominaisuuksista vain yksi. Esittele kolme muuta 
     mielestäsi kiinnostavaa HTML5-ominaisuutta ja kerro lyhyesti, mitä niillä
     voi tehdä.
 

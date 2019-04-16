@@ -14,10 +14,10 @@ Valmiina on myös funktio `println(item)`, jolla voi tulostaa yhden rivin sivull
 1.  Tee funktio `parilliset`, joka tulostaa parilliset kokonaisluvut väliltä 2–50.
 
 2.  Tee funktio `yhdestaJohonkin`, joka tulostaa kokonaisluvut 1:stä parametrina annettuun lukuun
-    asti _(esimerkissä: 12)_.
+    asti.
 
 3.  Tee funktio `jostainJohonkin`, joka tulostaa kokonaisluvut parametrina annetusta luvusta
-    toiseen parametrina annettuun lukuun asti _(esimerkissä: 5, 17)_.
+    toiseen parametrina annettuun lukuun asti.
 
 4.  Tee funktio `tulostaTahtia(montako)`, joka tulostaa annetun määrän tähtiä ja
     rivinvaihdon. Esimerkiksi kutsu `tulostaTahtia(9)` tulostaa:  
@@ -70,7 +70,6 @@ Tee kaikki funktiot tiedostoon `script.js`.
 11.	Toteuta funktio `rekursiivinenSumma(n)`, joka laskee ja palauttaa lukusarjan summan rekursiivisella algoritmilla _(20100)_.
 12.	Toteuta funktio `rekursiivinenKertoma(n)`, joka laskee ja palauttaa kertoman rekursiivisella algoritmilla _(479001600)_.
 
-
 ## Palautus
 
 Palauta linkki nettisivuun.
@@ -78,3 +77,7 @@ Palauta linkki nettisivuun.
 ## Ohjeita
 
 Kehityksen aikana kannattaa testata funktioita kutsumalla niitä suoraan, jotta näet, mitä ne tekevät.
+
+Pidä selaimen konsoli auki, jotta näet, jos sinne ilmaantuu virheitä. Virheilmoitus kertoo sinulle, mikä virhe oli ja millä rivillä se havaittiin.
+
+Tositorakenteiden kanssa tulee toisinaan kirjoitettua toistorakenteita, jotka eivät lopu koskaan. Jos sivu ei tunnu vastaavan eikä näy virheitä, tarkista, onko se jäänyt ikuiseen silmukkaan. 

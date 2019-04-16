@@ -1,5 +1,3 @@
-
-
 # JavaScript ohjelmoinnin perusteet
 
 ## Aloitus
@@ -31,28 +29,28 @@ Jos tehtävärepositoryyn, josta paikallinen kopiosi kloonattiin, muuttuu, voit 
 ## Oma etä-repository
 
 Jos ja kun haluat oman työsi myös turvaan pilveen, toimi näin:
-- Kloonaus asetti sinulle todennäköisesti remote-repositoryn nimeltä origin:
+- Kloonaus asetti sinulle todennäköisesti remote-repositoryn nimeltä `origin`:
     ```console
     $ git remote -v
     origin  https://gitlab.com/markkuruonavaara/javascript-perusteet.git (fetch)
     origin  https://gitlab.com/markkuruonavaara/javascript-perusteet.git (push)
     ```
 
-- origin on etä-repositoryn oletusnimi, lienee viisasta vaihtaa nimi sekaannusten välttämiseksi. Olkoon uusi nimi upstream:
+- `origin` on etä-repositoryn oletusnimi, lienee viisasta vaihtaa nimi sekaannusten välttämiseksi. Olkoon uusi nimi `upstream`:
     ```console
     $ git remote rename origin upstream
     ```
-- Luo sitten käyttämäsi git-palvelun ohjeiden mukaisesti etä-repository. Kun se on olemassa, määritä oma etä-repositorysi nimelle origin ja puske paikallisen repositoryn master-haaran sisältö etä-repositoryyn:
+- Luo sitten käyttämäsi git-palvelun ohjeiden mukaisesti etä-repository. Kun se on olemassa, määritä oma etä-repositorysi nimelle `origin` ja puske paikallisen repositoryn `master`-haaran sisältö etä-repositoryyn:
     ```console
     $ git remote add origin <etärepositorysi osoite>
     $ git push -u origin master
     ```
 Nyt tilanne on seuraavan kaltainen:
-- teet päivittäiset työsi paikallisessa repositoryssä ja pusket ne origin-repositoryyn
-- haet tarvittaessa tehtävämateriaalipäivitykset upstream-repositorystä.
+- teet päivittäiset työsi paikallisessa repositoryssä ja pusket ne `origin`-repositoryyn
+- haet tarvittaessa tehtävämateriaalipäivitykset `upstream`-repositorystä.
   
 <image src="media/multiple_remotes.png" max-width="400px"/>
 
-### Vaihtoehtoinen tapa - fork
+### Vaihtoehtoinen tapa: fork
 
-Git-palvelujen fork-toiminnallisuus tekee saman kuin edellä kuvattu proseduuri. Lähtökohtana siinä on, että kloonattavasta reposirorystä tehdään ensin _palveluun_ klooni (fork), sitten vasta kloonataan paikallinen kopio. Lue käyttämäsi git-palvelun ohjeista, miten se siellä tehdään. 
+Git-palvelujen fork-toiminnallisuus tekee saman kuin edellä kuvattu proseduuri. Lähtökohtana siinä on, että kloonattavasta repositorystä tehdään ensin palveluun klooni (fork), sitten siitä kloonataan paikallinen kopio. Lue käyttämäsi git-palvelun ohjeista, miten se siellä tehdään. 

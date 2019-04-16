@@ -45,12 +45,20 @@ Jos ja kun haluat oman työsi myös turvaan pilveen, toimi näin:
     $ git remote add origin <etärepositorysi osoite>
     $ git push -u origin master
     ```
-Nyt tilanne on seuraavan kaltainen:
-- teet päivittäiset työsi paikallisessa repositoryssä ja pusket ne `origin`-repositoryyn
-- haet tarvittaessa tehtävämateriaalipäivitykset `upstream`-repositorystä.
-  
-<image src="media/multiple_remotes.png" max-width="400px"/>
-
 ### Vaihtoehtoinen tapa: fork
 
 Git-palvelujen fork-toiminnallisuus tekee saman kuin edellä kuvattu proseduuri. Lähtökohtana siinä on, että kloonattavasta repositorystä tehdään ensin palveluun klooni (fork), sitten siitä kloonataan paikallinen kopio. Lue käyttämäsi git-palvelun ohjeista, miten se siellä tehdään. 
+
+## Etärepositoryjen käyttö
+Toimintapa on seuraavan kaltainen:
+- teet päivittäiset työsi paikallisessa repositoryssä ja pusket ne `origin`-repositoryyn
+    ```console
+    $ git push origin master
+    ```
+- haet tarvittaessa tehtävämateriaalipäivitykset `upstream`-repositorystä.
+    ```console
+    $ git pull upstream master
+    ```
+  
+<image src="media/multiple_remotes.png" max-width="400px"/>
+

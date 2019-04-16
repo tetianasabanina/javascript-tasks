@@ -35,22 +35,14 @@
       function kasvata() {
         console.log("Click");
         // kasvata laskurin arvoa ja päivitä se sivulle
-        arvo = arvo + 1;
-        laskuri.innerHTML = arvo;
-
+        
         asetaTaustaVari();
       }
 
       function asetaTaustaVari() {
         // aseta taustaväri laskurin arvon perusteella:
         // parillinen: sininen, pariton: punainen
-        if (arvo % 2 == 0) {
-          laskuri.style.backgroundColor = 'blue';
-        } else {
-          laskuri.style.backgroundColor = 'red';
-        }
-      }
-
+        
       laskuri.onclick = kasvata;
     </script>
 

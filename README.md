@@ -60,5 +60,5 @@ Toimintapa on seuraavan kaltainen:
     $ git pull upstream master
     ```
   
-<image src="media/multiple_remotes.png" max-width="400px"/>
+![](media/multiple_remotes.png)
 

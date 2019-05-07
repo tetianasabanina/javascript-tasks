@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -15,7 +17,10 @@ body {
 }
 
 #nappula-container {
-  margin: 0 auto
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .nappula {
@@ -55,4 +60,6 @@ body {
   align-items: center;
   font-size: 42px;
   color: blue;
+  padding: 3%;
+  text-align: center
 }

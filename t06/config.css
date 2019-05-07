@@ -1,0 +1,22 @@
+body {
+    max-width: 600px;
+    margin: auto;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+.field label {
+    width: 100px;
+}
+
+.field div {
+    width: 100%;
+}
+
+.field input[type="text"] {
+    width: 100%;
+}

@@ -10,7 +10,6 @@ $ git clone <repositoryn osoite>
 ## Tehtävien tekeminen
 Jokaiseen tehtävään on valmiiksi toteutettuna ohjelmarunko, jossa perusrakenteet on jo toteutettu, ja voit keskittyä tehtävässä harjoiteltavana oleviin asioihin. Ohjelmointitehtävissä tehtävänäsi on siis täydentää ohjelmarunko toimivaksi ohjelmaksi. 
 
-
 ## Tehtävät
 
 - [Tehtävä 00: Ympäristö kuntoon ja html-kertaus](t00/README.md)
@@ -19,6 +18,7 @@ Jokaiseen tehtävään on valmiiksi toteutettuna ohjelmarunko, jossa perusrakent
 - [Tehtävä 03: HTML5, CSS ja JavaScript](t03/README.md)
 - [Tehtävä 04: Reaktiopeli](t04/README.md)
 - [Tehtävä 05: Toistorakenteet ja funktiot](t05/README.md)
+- [Tehtävä 06: Oliot ja JSON](t06/README.md)
 
 ## Versionhallinta
 
@@ -61,4 +61,3 @@ Toimintapa on seuraavan kaltainen:
     ```
   
 ![](media/multiple_remotes.png)
-

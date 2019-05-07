@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='config.css'>
+</head>
+
+<body>
+    <h1>Asetukset</h1>
+    <form id="config-form">
+        <div class="field">
+            <label for="title">Otsikko</label>
+            <div>
+                <input name="title" type="text">
+            </div>
+        </div>
+        <div class="field">
+            <label for="date">Määräaika</label>
+            <div>
+                <input name="date" type="date">
+                <input name="time" type="time" value="00:00">
+            </div>
+        </div>
+        <label for="message">Viesti, kun määräaika on saavutettu</label>
+            <div>
+                <input name="message" type="text">
+            </div>
+        <div class="field">
+            <button type="submit">Aseta</button>
+        </div>
+    </form>
+    <script src='config.js'></script>
+</body>
+
+</html>

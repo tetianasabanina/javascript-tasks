@@ -25,19 +25,25 @@ function duration(from, to) { //get start and finish of period and returns the d
 
     return timeForEvent;
 }
-var today = new Date();
-console.log("today: "+today);
 
-var event = new Date(2019, 5, 21, 6, 30);
-var timeForEvent;
-console.log("event: "+event);
-duration(today, event);
-console.log (timeForEvent);
-// document.querySelectorAll(`[data-key='${d}']`).innerHTML = timeForEvent[0];
-// var test = document.
-//console.log(timeForEvent['d']);
-//console.log(document.querySelector(`[data-key='${"d"}']`).innerHTML);
+function setTimer (timeForEvent) { // prints data from object to the window
 document.querySelector(`[data-key='${"d"}']`).innerHTML = timeForEvent['d'];
 document.querySelector(`[data-key='${"h"}']`).innerHTML = timeForEvent['h'];
 document.querySelector(`[data-key='${"m"}']`).innerHTML = timeForEvent['m'];
 document.querySelector(`[data-key='${"s"}']`).innerHTML = timeForEvent['s'];
+}
+
+var today = new Date();
+function getCurrTime() { // gets current time in given time interval
+    today = new Date();
+    duration(today, event);
+    setTimer(timeForEvent);
+}
+setInterval(getCurrTime, 1000);
+console.log("today: "+today);
+var event = new Date(2019, 5, 21, 6, 30);
+var timeForEvent;
+console.log("event: "+event);
+/*/duration(today, event);
+console.log (timeForEvent);
+setTimer(timeForEvent);*/

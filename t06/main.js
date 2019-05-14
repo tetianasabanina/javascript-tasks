@@ -1,6 +1,6 @@
 "use strict";
 
-function duration(from, to) { //get start and finish of period and returns the duration of period in JS object.
+function duration(from, to) { //gets start and finish of period and returns the duration of period as a JS object.
     var timer = to - from; // duration in msec
     console.log(timer);
     
@@ -26,7 +26,7 @@ function duration(from, to) { //get start and finish of period and returns the d
     return timeForEvent;
 }
 
-function setTimer (timeForEvent) { // prints data from object to the window
+function printInterval (timeForEvent) { // prints data from object to the window
 document.querySelector(`[data-key='${"d"}']`).innerHTML = timeForEvent['d'];
 document.querySelector(`[data-key='${"h"}']`).innerHTML = timeForEvent['h'];
 document.querySelector(`[data-key='${"m"}']`).innerHTML = timeForEvent['m'];
@@ -34,12 +34,12 @@ document.querySelector(`[data-key='${"s"}']`).innerHTML = timeForEvent['s'];
 }
 
 var today = new Date();
-function getCurrTime() { // gets current time in given time interval
+function setTimer() { // gets current time in given time interval
     today = new Date();
     duration(today, event);
-    setTimer(timeForEvent);
+    printInterval(timeForEvent);
 }
-setInterval(getCurrTime, 1000);
+setInterval(setTimer, 1000); 
 console.log("today: "+today);
 var event = new Date(2019, 5, 21, 6, 30);
 var timeForEvent;

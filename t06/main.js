@@ -26,7 +26,7 @@ function duration(from, to) { //gets start and finish of period and returns the 
     return timeForEvent;
 }
 
-function printInterval (timeForEvent) { // prints data from object to the window
+function printInterval (timeForEvent) { // prints data from object to the HTML-page
 document.querySelector(`[data-key='${"d"}']`).innerHTML = timeForEvent['d'];
 document.querySelector(`[data-key='${"h"}']`).innerHTML = timeForEvent['h'];
 document.querySelector(`[data-key='${"m"}']`).innerHTML = timeForEvent['m'];
@@ -40,15 +40,15 @@ function myMessage() {
     document.getElementById("message").innerHTML = "Lomille lomps!";
 }
 function setsTimer() { // event's timer
-    if (Math.round(today/1000 < event/1000)) {
-        today = new Date();
+    if (Math.round(today/1000 < event/1000)) { // if event's time is not reached
+        today = new Date();                    // get new time
         //console.log (event/1000 - Math.round(today/1000));
-        duration(today, event);
-        printInterval(timeForEvent);
+        duration(today, event);                // calculate the time interval
+        printInterval(timeForEvent);           // print the time interval to HTML-page
     }
     else {    
-        stopTimer();
-        myMessage();
+        stopTimer(); // coundown stops
+        myMessage(); // message appears 
     }
 }
 

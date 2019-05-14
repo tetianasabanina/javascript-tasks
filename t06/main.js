@@ -2,7 +2,7 @@
 
 function duration(from, to) { //gets start and finish of period and returns the duration of period as a JS object.
     var timer = to - from; // duration in msec
-    console.log(timer);
+    // console.log(timer);
     
     var timerSec = Math.round(timer / 1000); // duration in sec 
     var sec = timerSec % 60; // extracts seconds
@@ -33,17 +33,16 @@ document.querySelector(`[data-key='${"m"}']`).innerHTML = timeForEvent['m'];
 document.querySelector(`[data-key='${"s"}']`).innerHTML = timeForEvent['s'];
 }
 
-var today = new Date();
-function setTimer() { // gets current time in given time interval
+function setTimer() { // activates event's timer
     today = new Date();
     duration(today, event);
     printInterval(timeForEvent);
 }
-setInterval(setTimer, 1000); 
+
+var today = new Date();
 console.log("today: "+today);
 var event = new Date(2019, 5, 21, 6, 30);
 var timeForEvent;
 console.log("event: "+event);
-/*/duration(today, event);
-console.log (timeForEvent);
-setTimer(timeForEvent);*/
+setInterval(setTimer, 1000); // sets time interval for running programm
+

@@ -36,7 +36,9 @@ document.querySelector(`[data-key='${"s"}']`).innerHTML = timeForEvent['s'];
 function stopTimer() { //stops timer when the event time achived
     clearInterval(interval);
 }
-
+function myMessage() {
+    document.getElementById("message").innerHTML = "Lomille lomps!";
+}
 function setsTimer() { // event's timer
     if (Math.round(today/1000 < event/1000)) {
         today = new Date();
@@ -52,7 +54,7 @@ function setsTimer() { // event's timer
 
 var today = new Date();
 console.log("today: "+today);
-var event = new Date(2019, 4, 14, 11, 16);
+var event = new Date(2019, 4, 14, 11, 37);
 console.log("event: "+event);
 var timeForEvent;
 var interval = setInterval(setsTimer, 1000); // sets time interval for running programm

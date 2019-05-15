@@ -54,7 +54,7 @@ function setsTimer() { // event's timer
 
 var today = new Date();
 console.log("today: "+today);
-var event = new Date(2019, 4, 14, 11, 37);
+var event = new Date(2019, 5, 21, 6, 30);
 console.log("event: "+event);
 var timeForEvent;
 var interval = setInterval(setsTimer, 1000); // sets time interval for running programm

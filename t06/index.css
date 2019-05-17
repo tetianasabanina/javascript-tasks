@@ -46,6 +46,12 @@ main {
     margin: 10px 0;
     padding: 5px 10px;
     border: solid blue 1px;
-    border-radius: 3px;
+    border-radius: 5px;
     align-items: center;
+}
+.one {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ flex-wrap: wrap;
 }

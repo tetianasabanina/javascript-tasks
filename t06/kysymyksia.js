@@ -1,51 +1,74 @@
 "use strict";
+// määritää olio ja tulosta konsoolin 
 
-function ex12 () {
+function setOlio () {
     var jasenet = {
-    nimi: { etunimi: 'Raija', sukunimi: 'Nurminen'},
-    ika: 38,
-    sukupuoli: "nainen",
-    harrastukset: ['ratsastus', 'tanssi', 'shoppailu'],
-    jasen: true
-}
-console.log(jasenet);
-var json = JSON.stringify(jasenet);
-document.getElementById("olio").innerHTML = json;
+        nimi: { etunimi: 'Raija', sukunimi: 'Nurminen'},
+        ika: 38,
+        sukupuoli: "nainen",
+        harrastukset: ['ratsastus', 'tanssi', 'shoppailu'],
+        jasen: true
+        }
+    console.log(jasenet);
+
+    var json = JSON.stringify(jasenet); //olio => JSON merkkijonoon
+    document.getElementById("olio").innerHTML = json;
 }
 
-function ex3() {
-var olio = {};
-console.log("tyhjä olio: " + olio);
-olio.etunimi = "Magnus";
-console.log(olio);
-olio.sukunimi = "von Wright";
-console.log(olio);
-olio.etunimi = "Ferdinand"
-console.log(olio);
-delete olio.etunimi;
-console.log(olio);
+function toiminnotOliossa() {
+    var olio = {}; //lou tyhja olio
+    console.log("tyhjä olio: " + olio);  
+    olio.etunimi = "Magnus"; //lisää oliolle ominaisuus etunimi ja anna sille arvo 
+    console.log(olio);
+    olio.sukunimi = "von Wright"; //lisää oliolle ominaisuus sukunimi ja anna sille arvo
+    console.log(olio);
+    olio.etunimi = "Ferdinand" //Muutaa ominaisuuden etunimi 
+    console.log(olio);
+    delete olio.etunimi;// Poista ominaisuus etunimi oliosta.
+    console.log(olio);
 }
 
-function ex4() {
-var olio2 = document.getElementById('send').addEventListener('click', handleClick);
-console.log(olio2);
+function jsonOlioksi() {
+    document.getElementById('send').addEventListener('click', klikkaus);
 }
-function handleClick() {
-    const inputKentta = document.getElementById('json');
-    console.log(inputKentta.value);
-    let syote = inputKentta.value;
-    inputKentta.value = '';
-    if (syote === '') {
-        syote = 'Anna JSON olio';
+
+function klikkaus() {
+    const syote = document.getElementById('json').value;
+    let message;
+    
+    if (!IsValidJSONString(syote)) {
+        message = 'virheellinen JSON-muoto';
+    } else {
+        message = 'JSON-merkkijono muodostetaan... ';
     }
+
+    document.getElementById('message').innerHTML = message;
     document.getElementById('form').classList.add('muuttunut');
     setTimeout(poista, 3000);
-    return inputKentta;
+    muodostaOlio(syote);
 }
 
 function poista() {
     document.getElementById('form').classList.remove('muuttunut');
+    document.getElementById('message').innerHTML = "";
 }
-ex12();
-ex3();
-ex4();
+
+function muodostaOlio(jsonToOlio) {
+    let olioFromJson = JSON.parse(jsonToOlio);
+    console.log("javascript-olio json merkkijonosta= ");
+    console.dir(olioFromJson); /*logs an object to the console, with the object's fields 
+                                expandable using disclosure widgets */
+}
+
+function IsValidJSONString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+setOlio();              //kysymyksia 1,2
+toiminnotOliossa();     //kysymys 3
+jsonOlioksi();          //kysymys 4

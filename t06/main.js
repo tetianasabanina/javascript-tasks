@@ -1,6 +1,6 @@
 "use strict";
 
-function duration(from, to) { //gets start and finish of period and returns the duration of period as a JS object.
+function duration(from, to) { //returns the duration of period as a JS object.
     var timer = to - from; // duration in msec
     // console.log(timer);
     
@@ -27,17 +27,20 @@ function duration(from, to) { //gets start and finish of period and returns the 
 }
 
 function printInterval (timeForEvent) { // prints data from object to the HTML-page
-document.querySelector(`[data-key='${"d"}']`).innerHTML = timeForEvent['d'];
-document.querySelector(`[data-key='${"h"}']`).innerHTML = timeForEvent['h'];
-document.querySelector(`[data-key='${"m"}']`).innerHTML = timeForEvent['m'];
-document.querySelector(`[data-key='${"s"}']`).innerHTML = timeForEvent['s'];
+    document.querySelector(`[data-key='${"d"}']`).innerHTML = timeForEvent['d'];
+    document.querySelector(`[data-key='${"h"}']`).innerHTML = timeForEvent['h'];
+    document.querySelector(`[data-key='${"m"}']`).innerHTML = timeForEvent['m'];
+    document.querySelector(`[data-key='${"s"}']`).innerHTML = timeForEvent['s'];
 }
 
 function stopTimer() { //stops timer when the event time achived
     clearInterval(interval);
 }
+
 function myMessage() {
-    document.getElementById("message").innerHTML = "Lomille lomps!";
+    var viesti = localStorage.getItem('formViesti');
+    document.getElementById("message").innerHTML = viesti;
+    
 }
 function setsTimer() { // event's timer
     if (Math.round(today/1000 < event/1000)) { // if event's time is not reached
@@ -51,6 +54,12 @@ function setsTimer() { // event's timer
         myMessage(); // message appears 
     }
 }
+
+var otsikko = localStorage.getItem('formOtsikko');
+document.getElementById('otsikko').innerHTML = otsikko;
+
+var pvm = localStorage.getItem('formPvm');
+var aika = localStorage.getItem('formAika');
 
 var today = new Date();
 console.log("today: "+today);

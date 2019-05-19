@@ -13,6 +13,8 @@ function saadaAsetukset() {
     console.log(viesti);
     localStorage.setItem('formViesti', viesti);
 }
+
+// lomaketta ei lähetetä
 function preventSubmit() {
 document.getElementById("btn").addEventListener("click", function(event){
     event.preventDefault()

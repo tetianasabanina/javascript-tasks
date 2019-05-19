@@ -12,26 +12,29 @@
 <body>
     <h1>Asetukset</h1>
     <form id="config-form">
-        <div class="field">
-            <label for="title">Otsikko</label>
-            <div>
-                <input name="title" type="text">
+        <fieldset>
+            <legend>Syötä asetukset:</legend>
+            <div class="field">
+                <label for="title">Otsikko</label>
+                <div>
+                    <input id="otsikko" name="title" type="text" required>
+                </div>
             </div>
-        </div>
-        <div class="field">
-            <label for="date">Määräaika</label>
-            <div>
-                <input name="date" type="date">
-                <input name="time" type="time" value="00:00">
+            <div class="field">
+                <label for="date">Määräaika</label>
+                <div>
+                    <input id="pvm" name="date" type="date">
+                    <input id="aika" name="time" type="time" value="00:00">
+                </div>
             </div>
-        </div>
-        <label for="message">Viesti, kun määräaika on saavutettu</label>
+            <label for="message">Viesti, kun määräaika on saavutettu</label>
             <div>
-                <input name="message" type="text">
+                <input id="viesti" name="message" type="text" required>
             </div>
-        <div class="field">
-            <button type="submit">Aseta</button>
-        </div>
+            <div class="field">
+                <button onclick=myFunction() type="submit">Aseta</button>
+            </div>
+        </fieldset>
     </form>
     <script src='config.js'></script>
 </body>

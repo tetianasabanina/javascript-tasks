@@ -2,16 +2,18 @@ function saadaAsetukset() {
     preventSubmit();
     var otsikko = document.getElementById("otsikko").value;
     console.log("otsikko "+otsikko);
-    localStorage.setItem('formOtsikko', otsikko);
-    var pvm = document.getElementById('pvm').value;
-    localStorage.setItem('formPvm', pvm);
+    //localStorage.setItem('formOtsikko', otsikko);
+    var pvm = new Date(document.getElementById('pvm').value);
     console.log("pvm"+pvm);
-    var aika = document.getElementById('aika').value;
-    console.log(aika);
-    localStorage.setItem('formAika', aika);
+    pvm = pvm + document.getElementById('aika').value;
+    console.log("+ " + pvm);
+    //localStorage.setItem('formPvm', pvm);
     var viesti = document.getElementById('viesti').value;
     console.log(viesti);
-    localStorage.setItem('formViesti', viesti);
+    //localStorage.setItem('formViesti', viesti);
+    var olio = muodostaOlio(otsikko, pvm, viesti);
+    var jsonOlio = JSON.stringify(olio);
+    localStorage.setItem('asetukset', jsonOlio);
 }
 
 // lomaketta ei lähetetä
@@ -21,5 +23,13 @@ document.getElementById("btn").addEventListener("click", function(event){
   });
 }
 
-
+function muodostaOlio(formOtsikko, formPvm, formViesti) {
+   var asetukset = {
+       otsikko: formOtsikko,
+       pvm: formPvm,
+       viesti: formViesti 
+   };
+   console.log(asetukset);
+   return asetukset;
+}
 

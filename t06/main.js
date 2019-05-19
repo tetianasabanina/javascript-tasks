@@ -38,14 +38,13 @@ function stopTimer() { //stops timer when the event time achived
 }
 
 function myMessage() {
-    var viesti = localStorage.getItem('formViesti');
-    document.getElementById("message").innerHTML = viesti;
+    //var viesti = localStorage.getItem('formViesti');
+    document.getElementById("message").innerHTML = "viesti";
     
 }
 function setsTimer() { // event's timer
     if (Math.round(today/1000 < event/1000)) { // if event's time is not reached
         today = new Date();                    // get new time
-        //console.log (event/1000 - Math.round(today/1000));
         duration(today, event);                // calculate the time interval
         printInterval(timeForEvent);           // print the time interval to HTML-page
     }
@@ -55,15 +54,17 @@ function setsTimer() { // event's timer
     }
 }
 
-var otsikko = localStorage.getItem('formOtsikko');
-document.getElementById('otsikko').innerHTML = otsikko;
-
-var pvm = localStorage.getItem('formPvm');
-var aika = localStorage.getItem('formAika');
+var asetuksetJson = localStorage.getItem('asetukset');
+var asetukset = JSON.parse(asetuksetJson);
+/*console.log(asetukset.otsikko);
+console.log(asetukset.pvm);
+console.log(asetukset.viesti);*/
+document.getElementById('otsikko').innerHTML = asetukset.otsikko;
 
 var today = new Date();
 console.log("today: "+today);
-var event = new Date(2019, 5, 21, 6, 30);
+var event = new Date(asetukset.pvm);
+//var event = new Date(2019,4,19,16,54);
 console.log("event: "+event);
 var timeForEvent;
 var interval = setInterval(setsTimer, 1000); // sets time interval for running programm

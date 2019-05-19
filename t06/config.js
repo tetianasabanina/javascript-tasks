@@ -2,7 +2,13 @@ function saadaAsetukset() {
     preventSubmit();
     var otsikko = document.getElementById("otsikko").value;
     var pvm = new Date(document.getElementById('pvm').value);
-    pvm = pvm + document.getElementById('aika').value;
+    var aika = document.getElementById('aika').value;
+    var aikaSec = convertToMillisec(aika);
+    console.log(pvm);
+    console.log(aikaSec);
+    pvm = Date.parse(pvm) + aikaSec;
+    pvm = new Date(pvm);
+    console.log(pvm);
     var viesti = document.getElementById('viesti').value;
     var olio = muodostaOlio(otsikko, pvm, viesti);
     var jsonOlio = JSON.stringify(olio);
@@ -26,3 +32,8 @@ function muodostaOlio(formOtsikko, formPvm, formViesti) {
    return asetukset;
 }
 
+function convertToMillisec(ts) {
+    var aika = ts.split(':');
+    var seconds = (+aika[0] * 3600 + aika[1] * 60);
+    return seconds;
+}

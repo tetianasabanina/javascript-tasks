@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+  <meta charset="utf-8">
+  <title>Laskuri</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    #laskuri {
+      width: 300px;
+      height: 300px;
+      background-color: black;
+      color: white;
+      margin: 50px auto;
+      font-size: 200px;
+      padding: 30px 0px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id=laskuri>0</div>
+
+    <script>
+      var laskuri = document.getElementById('laskuri');
+      var arvo = parseInt(laskuri.innerHTML); // initialize global variable arvo !
+
+      function kasvata() {
+        // kasvata laskurin arvoa ja päivitä se sivulle
+        arvo++;
+        laskuri.innerHTML = arvo;
+        console.log('arvo = ' + arvo);
+        asetaTaustaVari();
+      }
+
+      function asetaTaustaVari() {
+        // aseta taustaväri laskurin arvon perusteella:
+        // parillinen: sininen, pariton: punainen
+        if (arvo % 2 == 0) {
+          document.getElementById('laskuri').style.backgroundColor = 'blue';
+        } else {
+          document.getElementById('laskuri').style.backgroundColor = 'red';
+        }
+      }
+      
+      //bonustehtävä
+
+      function overmouse() {
+        //document.getElementById('laskuri').style.opacity = "0.5" ;
+        var var1 = document.getElementById('laskuri');
+        var1.style.opacity = "0.6";
+        var1.style.border = "thick dotted yellow";
+      }
+      
+      function outmouse() {
+        document.getElementById('laskuri').style.opacity = "initial";
+        document.getElementById('laskuri').style.border = "initial" ;
+           }
+
+      laskuri.onclick = kasvata;  
+      laskuri.onmouseenter = overmouse;
+      laskuri.onmouseleave = outmouse;
+      
+    </script>
+
+<!--bonustehtävä-->
+
+    <button onclick="nollaus()">nollaa</button>
+    <!--funktio nollaa laskurin-->
+    <script>
+      function nollaus() {
+        arvo = 0;
+        laskuri.innerHTML = arvo;
+        document.getElementById('laskuri').style.backgroundColor = '';
+        console.log('Hello, I am function Nollaus! ');
+        console.log('arvo = ' + arvo);
+      }    
+
+      // document.getElementById('nollaus').onclick = nollaa; 
+    </script>
+    
+  </main>
+</body>
+
+</html>

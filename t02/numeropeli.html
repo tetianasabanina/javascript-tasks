@@ -10,20 +10,27 @@
         <form id="lomake">
       		<label for="luku">Arvaa luku väliltä 0-100: </label>
 		      <input id="luku" type="text" name="luku">
-		      <button type="submit">Arvaa</button>
+          <button type="submit">Arvaa</button>
+          <button id="new-game" onclick="nollaa()">Uudeleen</button>
+          <script>
+           function nollaa() {
+             location.reload();
+           }
+           </script> 
 	      </form>
         <p id="alempi"></p>
         <p id="ylempi"></p>
         <p id="vihje"></p>
-        <p id="numerot"></p>
+        <p><span id="numerot"></span><span id="last-num"></span></p>
+              
 
         <div class="bar-chart">
           <div class="bar" id="lower-bar" style="width: 0%; background-color: blue">
-            <span></span></div>
+            <span id="lower-value"></span></div>
           <div class="bar" id="middle-bar" style="width: 100%; background-color: orange">
             <span></span></div>
-          <div class="bar" id="upper-bar" style="width: 0  %; background-color: green">
-            <span></span></div>
+          <div class="bar" id="upper-bar" style="width: 0%; background-color: green">
+            <span id="upper-value"></span></div>
         </div>
         <script src="numeropeli.js"></script>
     </body>

@@ -10,12 +10,20 @@ body {
   width: 600px;
   height: 30px;
   align-items: stretch;
+  
 }
-
+p {
+  width: 100%
+}
 .bar {
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: bolder;
+  border-radius: 15px;
+}
+button {
+  border-radius: 10px;
+  padding: 10px;
 }

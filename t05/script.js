@@ -1,4 +1,4 @@
-//println("Hello, World!");
+println("Hello, World!");
 
 //F1 tulostaa parilliset kokonaisluvut väliltä 2–50
 function parilliset() {
@@ -20,29 +20,29 @@ function yhdestaJohonkin(luku) {
 //yhdestaJohonkin(12);
 
 //F3 tulostaa kokonaisluvut parametrina annetusta luvusta toiseen parametrina annettuun lukuun asti.
-function jostainJohonkin(luku1, luku2) {
-    for (let i = luku1; i <= luku2; i++) {
-        println(i);
+function jostainJohonkin(mista, mihin) {
+    while (mista <= mihin) {
+        println(mista++);
     }
 }
 //jostainJohonkin(8, 15);
 
 //F4 tulostaa annetun määrän tähtiä ja rivinvaihdon
+
 function tulostaTahtia(montako) {
-    const elem = document.querySelector('#output');
-    for (let i = 1; i <= montako; i++) {
-        //document.querySelector('#output').appendChild(document.createTextNode(String('*')));
-        const content = document.createTextNode(String('*'));
-        elem.appendChild(content);
-    }
-    const br = document.createElement('br');
-    elem.appendChild(br);
+    /*let rivi = '';
+    let i = 0;
+    while (i < montako) {
+        rivi = rivi + '* ';
+        i++;
+    } */
+    println('* '.repeat(montako));
 }
 
 //F5 tulostaa neliön käyttäen tulostaTahtia-funktiota
 function tulostaNelio(sivunpituus) {
-    for (let i = 1; i <= sivunpituus; i++) {
-        tulostaTahtia(sivunpituus);
+    for (let i = 0; i < sivunpituus; i++) {
+    tulostaTahtia(sivunpituus);
     }
 }
 
@@ -55,8 +55,8 @@ function tulostaSuorakulmio(leveys, korkeus) {
 
 //F7  tulostaa kolmion käyttäen tulostaTahtia-funktiota
 function tulostaKolmio(koko) {
-    for (let i = 1; i <= koko; i++) {
-        tulostaTahtia(i);
+    for (let i = 0; i < koko; i++) {
+        tulostaTahtia(i+1);
     }
 }
 
@@ -81,24 +81,37 @@ function kertoma(n) {
 /*F10 ajaa kaikki harjoituksen funktiot ja lisää väliin otsikkotulostuksia, joista
 selviää, mikä tehtävä kulloinkin on kyseessä */
 function ajaKaikki() {
-    run(parilliset);
-    run(yhdestaJohonkin, 12);
-    run(jostainJohonkin, 5, 17);
-    run(tulostaTahtia, 9);
-    run(tulostaNelio, 4);
-    run(tulostaSuorakulmio, 17, 3);
-    run(tulostaKolmio, 5);
-    println(run(lukusarjanSumma, 100));
-    println(run(kertoma, 10));
+    otsikko("parilliset");
+    parilliset();
+    otsikko("yhdestaJohonkin");
+    yhdestaJohonkin(randomInt(2, 16));
+    otsikko("jostainJohonkin");
+    jostainJohonkin(randomInt(2, 10), randomInt(11, 20));
+    otsikko("tulostaTahtia");
+    tulostaTahtia(randomInt(4, 12));
+    otsikko("tulostaNelio");
+    tulostaNelio(randomInt(3, 7));
+    otsikko("tulostaSuorakulmio");
+    tulostaSuorakulmio(randomInt(10, 18), randomInt(2, 7));
+    otsikko("tulostaKolmio");
+    tulostaKolmio(randomInt(4, 9));
+    otsikko("lukusarjanSumma");
+    println(lukusarjanSumma(randomInt(50, 100)));
+    otsikko("kertoma");
+    println(kertoma(randomInt(2, 20)));
+}
+function otsikko(teksti) {
+    println(teksti);
+    println('-'.repeat(teksti.length));
 }
 //F11 laskee ja palauttaa lukusarjan summan rekursiivisella algoritmilla.
 function rekursiivinenSumma(n) {
     if (n < 0) {
         return ('negative number!');
     } else if (n == 0) {
-        return (0);
+        return 0;
     } else if (n == 1) {
-        return (1);
+        return 1;
     } else {
         return (n + rekursiivinenSumma(n - 1));
     }
@@ -107,9 +120,7 @@ function rekursiivinenSumma(n) {
 //F12 laskee ja palauttaa kertoman rekursiivisella algoritmilla.
 function rekursiivinenKertoma(n) {
     if (n == 0) {
-        return (0);
-    } else if (n == 1) {
-        return (1);
+        return 1;
     } else {
         return (n * rekursiivinenKertoma(n - 1));
     }

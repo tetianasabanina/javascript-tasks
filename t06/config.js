@@ -26,9 +26,8 @@ function saadaAsetukset() {
         var jsonOlio = JSON.stringify(olio);
         localStorage.setItem('asetukset', jsonOlio);
         localStorage.setItem('avain', "taletettu");
-        
-        window.location.replace("index.html"); 
-        console.log(location.href);
+        var link = "index.html";
+        redirect(link);
     }
 }
 
@@ -61,4 +60,8 @@ function convertToMillisec(ts) {
     var aika = ts.split(':');
     var mseconds = (+aika[0] * 60 * 60 * 1000 + aika[1] * 60 * 1000);
     return mseconds;
+}
+
+function redirect(linkki) {
+    window.location.replace(linkki); 
 }

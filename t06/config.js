@@ -1,8 +1,11 @@
 // setting data from the previous session
 preAsetukset();
-var locStorageRecord = 0;
 
 // getting data from configuration page
+//document.getElementById('btn').onsubmit = saadaAsetukset();
+//document.getElementById('btn').addEventListener("click", saadaAsetukset);
+document.getElementById('config-form').addEventListener("click", saadaAsetukset);
+
 function saadaAsetukset() {
     preventSubmit();               // lomaketta ei lähetetä
     var otsikko = document.getElementById("otsikko").value;
@@ -63,5 +66,6 @@ function convertToMillisec(ts) {
 }
 
 function redirect(linkki) {
+    console.log("hello from redirect");
     window.location.replace(linkki); 
 }

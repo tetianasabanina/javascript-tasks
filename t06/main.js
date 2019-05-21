@@ -27,7 +27,6 @@ function setsTimer() { // event's timer
     }
 }
 
-
 function redirect() {
     window.location.replace("config.html");
 }

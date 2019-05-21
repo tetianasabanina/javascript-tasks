@@ -1,5 +1,9 @@
 "use strict";
 
+if (document.getElementById("message").innerHTML != " ") {
+    window.location.replace("config.html");
+}
+
 var asetuksetJson = localStorage.getItem('asetukset');
 var asetukset = JSON.parse(asetuksetJson);
 /*console.log(asetukset.otsikko);
@@ -15,9 +19,21 @@ console.log("event: "+event);
 var timeForEvent;
 var interval = setInterval(setsTimer, 1000); // sets time interval for running programm
 
-/*if (document.getElementById("message").innerHTML != " ") {
-    window.location.replace("config.html");
-}*/
+function setsTimer() { // event's timer
+    if (Math.round(today/1000 < event/1000)) { // if event's time is not reached
+        today = new Date();                    // get new time
+        duration(today, event);                // calculate the time interval
+        printInterval(timeForEvent);           // print the time interval to HTML-page
+    }
+    else {    
+        stopTimer(); // coundown stops
+        myMessage(); // message appears 
+    }
+}
+
+
+
+
 
 function duration(from, to) { //returns the duration of period as a JS object.
     var timer = to - from; // duration in msec
@@ -59,18 +75,6 @@ function stopTimer() { //stops timer when the event time achived
 function myMessage() {
     document.getElementById("message").innerHTML = asetukset.viesti;
     //document.getElementById("message").innerHTML = "viesti";
-    
-}
-function setsTimer() { // event's timer
-    if (Math.round(today/1000 < event/1000)) { // if event's time is not reached
-        today = new Date();                    // get new time
-        duration(today, event);                // calculate the time interval
-        printInterval(timeForEvent);           // print the time interval to HTML-page
-    }
-    else {    
-        stopTimer(); // coundown stops
-        myMessage(); // message appears 
-    }
 }
 
 

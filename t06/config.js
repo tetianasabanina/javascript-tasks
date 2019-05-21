@@ -22,9 +22,10 @@ function saadaAsetukset() {
         var olio = muodostaOlio(otsikko, pvm, viesti);
         var jsonOlio = JSON.stringify(olio);
         localStorage.setItem('asetukset', jsonOlio);
-        locStorageRecord = 1;
-        //window.location.replace("index.html");
-        window.location.href = "index.html";
+        
+        //locStorageRecord = 1;
+        window.location.replace('index.html');
+        //window.location.href = "index.html";
         
     }
 }
@@ -37,6 +38,8 @@ function preAsetukset() {
     var ensAsetukset = JSON.parse(localStorage.getItem('asetukset'));
     document.getElementById("otsikko").value = ensAsetukset.otsikko;
     document.getElementById("viesti").value = ensAsetukset.viesti;
+    console.log("asetukset");
+    console.log(ensAsetukset.pvm);
 }
 
 function preventSubmit() {

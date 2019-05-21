@@ -1,9 +1,8 @@
 "use strict";
 
 if (localStorage.getItem('avain') != "taletettu") {
-    window.location.replace("config.html");
+    redirect();
 }
-
 var asetuksetJson = localStorage.getItem('asetukset');
 var asetukset = JSON.parse(asetuksetJson);
 document.getElementById('otsikko').innerHTML = asetukset.otsikko;
@@ -24,7 +23,13 @@ function setsTimer() { // event's timer
     else {    
         stopTimer(); // coundown stops
         myMessage(); // message appears 
+        setTimeout(redirect, 10000);
     }
+}
+
+
+function redirect() {
+    window.location.replace("config.html");
 }
 
 function duration(from, to) { //returns the duration of period as a JS object.
@@ -62,10 +67,18 @@ function printInterval (timeForEvent) { // prints data from object to the HTML-p
 
 function stopTimer() { //stops timer when the event time achived
     clearInterval(interval);
+    document.querySelector(`[data-key='${"d"}']`).innerHTML = "00";
+    document.querySelector(`[data-key='${"h"}']`).innerHTML = "00";
+    document.querySelector(`[data-key='${"m"}']`).innerHTML = "00";
+    document.querySelector(`[data-key='${"s"}']`).innerHTML = "00";
+    
 }
 
 function myMessage() {
     document.getElementById("message").innerHTML = asetukset.viesti;
+    var odota = document.createElement("P");  
+    odota.innerText = "Voit aseta laskurin uudelleen 10 sekunnin kuluttua";         
+    document.getElementById("messageBlock").appendChild(odota);            
     localStorage.removeItem('avain');
 }
 

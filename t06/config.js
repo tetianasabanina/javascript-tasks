@@ -28,6 +28,7 @@ function saadaAsetukset() {
         localStorage.setItem('avain', "taletettu");
         
         window.location.replace("index.html"); 
+        console.log(location.href);
     }
 }
 

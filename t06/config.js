@@ -25,16 +25,11 @@ function saadaAsetukset() {
         var olio = muodostaOlio(otsikko, pvm, viesti);
         var jsonOlio = JSON.stringify(olio);
         localStorage.setItem('asetukset', jsonOlio);
+        localStorage.setItem('avain', "taletettu");
         
-        window.location.replace('index.html');
-        //window.location.href = "index.html";
-        
+        window.location.replace("index.html"); 
     }
 }
-
-console.log(locStorageRecord);
-
-//window.location.replace("index.html"); 
 
 function preAsetukset() {
     var ensAsetukset = JSON.parse(localStorage.getItem('asetukset'));
@@ -63,6 +58,6 @@ function muodostaOlio(formOtsikko, formPvm, formViesti) {
 
 function convertToMillisec(ts) {
     var aika = ts.split(':');
-    var seconds = (+aika[0] * 60 * 60 * 1000 + aika[1] * 60 * 1000);
-    return seconds;
+    var mseconds = (+aika[0] * 60 * 60 * 1000 + aika[1] * 60 * 1000);
+    return mseconds;
 }

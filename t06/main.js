@@ -1,20 +1,16 @@
 "use strict";
 
-if (document.getElementById("message").innerHTML != " ") {
+if (localStorage.getItem('avain') != "taletettu") {
     window.location.replace("config.html");
 }
 
 var asetuksetJson = localStorage.getItem('asetukset');
 var asetukset = JSON.parse(asetuksetJson);
-/*console.log(asetukset.otsikko);
-console.log(asetukset.pvm);
-console.log(asetukset.viesti);*/
 document.getElementById('otsikko').innerHTML = asetukset.otsikko;
 
 var today = new Date();
 console.log("today: "+today);
 var event = new Date(asetukset.pvm);
-//var event = new Date(2019,4,19,16,54);
 console.log("event: "+event);
 var timeForEvent;
 var interval = setInterval(setsTimer, 1000); // sets time interval for running programm
@@ -70,7 +66,7 @@ function stopTimer() { //stops timer when the event time achived
 
 function myMessage() {
     document.getElementById("message").innerHTML = asetukset.viesti;
-    //document.getElementById("message").innerHTML = "viesti";
+    localStorage.removeItem('avain');
 }
 
 

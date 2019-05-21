@@ -7,7 +7,8 @@ function saadaAsetukset() {
     preventSubmit();               // lomaketta ei lähetetä
     var otsikko = document.getElementById("otsikko").value;
     var viesti = document.getElementById('viesti').value;
-    var pvm = new Date(document.getElementById('pvm').value);
+    var dayOnly = document.getElementById('pvm').value
+    var pvm = new Date(dayOnly);
     var timezoneOffset = pvm.getTimezoneOffset() * 60 * 1000;
     var aika = document.getElementById('aika').value;
     var aikaSec = convertToMillisec(aika);
@@ -19,11 +20,12 @@ function saadaAsetukset() {
     if (pvm <= todayIs || pvm == "Invalid Date") {
         alert("Päivämääräsi on vanhentunut tai ei asetettu");
     } else {
+        localStorage.setItem('päivä', dayOnly);
+        localStorage.setItem('aika', aika);
         var olio = muodostaOlio(otsikko, pvm, viesti);
         var jsonOlio = JSON.stringify(olio);
         localStorage.setItem('asetukset', jsonOlio);
         
-        //locStorageRecord = 1;
         window.location.replace('index.html');
         //window.location.href = "index.html";
         
@@ -38,8 +40,9 @@ function preAsetukset() {
     var ensAsetukset = JSON.parse(localStorage.getItem('asetukset'));
     document.getElementById("otsikko").value = ensAsetukset.otsikko;
     document.getElementById("viesti").value = ensAsetukset.viesti;
-    console.log("asetukset");
-    console.log(ensAsetukset.pvm);
+    document.getElementById("pvm").value = localStorage.getItem('päivä');
+    document.getElementById("aika").value = localStorage.getItem('aika')
+    
 }
 
 function preventSubmit() {

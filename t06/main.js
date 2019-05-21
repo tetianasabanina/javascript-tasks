@@ -31,10 +31,6 @@ function setsTimer() { // event's timer
     }
 }
 
-
-
-
-
 function duration(from, to) { //returns the duration of period as a JS object.
     var timer = to - from; // duration in msec
     // console.log(timer);

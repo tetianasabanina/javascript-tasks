@@ -1,5 +1,8 @@
 "use strict";
 
+/*if (document.getElementById("message").innerHTML != " ") {
+    window.location.replace("config.html");
+}*/
 function duration(from, to) { //returns the duration of period as a JS object.
     var timer = to - from; // duration in msec
     // console.log(timer);
@@ -38,7 +41,6 @@ function stopTimer() { //stops timer when the event time achived
 }
 
 function myMessage() {
-    //var viesti = localStorage.getItem('formViesti');
     document.getElementById("message").innerHTML = "viesti";
     
 }

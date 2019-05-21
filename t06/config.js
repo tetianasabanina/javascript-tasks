@@ -1,5 +1,9 @@
+// setting data from the previous session
+preAsetukset();
+
+// getting data from configuration page
 function saadaAsetukset() {
-    preventSubmit();
+    preventSubmit();               // lomaketta ei lähetetä
     var otsikko = document.getElementById("otsikko").value;
     var pvm = new Date(document.getElementById('pvm').value);
     var aika = document.getElementById('aika').value;
@@ -9,13 +13,24 @@ function saadaAsetukset() {
     pvm = Date.parse(pvm) + aikaSec;
     pvm = new Date(pvm);
     console.log(pvm);
-    var viesti = document.getElementById('viesti').value;
+    var todayIs = new Date();
+    if (pvm <= todayIs || pvm == "Invalid Date") {
+        alert("Päivämääräsi on vanhentunut tai ei asetettu");
+    }
+    else {var viesti = document.getElementById('viesti').value;
     var olio = muodostaOlio(otsikko, pvm, viesti);
     var jsonOlio = JSON.stringify(olio);
     localStorage.setItem('asetukset', jsonOlio);
+    window.location.replace("index.html"); 
+    }
 }
 
-// lomaketta ei lähetetä
+function preAsetukset() {
+    var ensAsetukset = JSON.parse(localStorage.getItem('asetukset'));
+    document.getElementById("otsikko").value = ensAsetukset.otsikko;
+    document.getElementById("viesti").value = ensAsetukset.viesti;
+}
+
 function preventSubmit() {
 document.getElementById("btn").addEventListener("click", function(event){
     event.preventDefault()

@@ -25,6 +25,7 @@ function setsTimer() { // event's timer
     }
     else {    
         stopTimer(); // coundown stops
+        
         myMessage(); // message appears 
         setTimeout(redirect, 10000);
     }
@@ -68,6 +69,7 @@ function printInterval (timeForEvent) { // prints data from object to the HTML-p
 }
 
 function stopTimer() { //stops timer when the event time achived
+    clearTimeout();
     clearInterval(interval);
     document.querySelector(`[data-key='${"d"}']`).innerHTML = "00";
     document.querySelector(`[data-key='${"h"}']`).innerHTML = "00";

@@ -1,17 +1,7 @@
 // setting data from the previous session
 preAsetukset();
 
-// getting data from configuration page
-//document.getElementById('btn').onsubmit = saadaAsetukset();
-//document.getElementById('btn').addEventListener("submit", saadaAsetukset);
-
-//document.getElementById('config-form').addEventListener("submit", saadaAsetukset);//redirecting to itselfs;
-//document.getElementById('btn').onclick = function() {saadaAsetukset}; //redirecting to itselfs;
-
-console.log("exited function.");
-
 function saadaAsetukset() {
-    console.log("entering saada asetukset2");
     preventSubmit();               // lomaketta ei lähetetä
     var otsikko = document.getElementById("otsikko").value;
     var viesti = document.getElementById('viesti').value;
@@ -22,7 +12,7 @@ function saadaAsetukset() {
     var aikaSec = convertToMillisec(aika);
     pvm = Date.parse(pvm) + aikaSec + timezoneOffset;
     pvm = new Date(pvm);
-    console.log(pvm);
+    //console.log(pvm);
     validointi(otsikko, viesti, pvm, dayOnly, aika);
         window.location = "index.html";
         return false;
@@ -62,7 +52,7 @@ function muodostaOlio(formOtsikko, formPvm, formViesti) {
        pvm: formPvm,
        viesti: formViesti 
    };
-   console.log(asetukset);
+   //console.log(asetukset);
    return asetukset;
 }
 
@@ -73,6 +63,6 @@ function convertToMillisec(ts) {
 }
 
 function redirect(linkki) {
-    console.log("hello from redirect");
+    //console.log("hello from redirect");
     window.location.replace(linkki); 
 }

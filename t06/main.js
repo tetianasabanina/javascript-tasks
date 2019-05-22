@@ -1,7 +1,10 @@
 "use strict";
-
+console.log("hello from index");
+console.log(localStorage.getItem('avain'));
 if (localStorage.getItem('avain') != "taletettu") {
+    console.log("hello from index.if");
     redirect();
+
 }
 var asetuksetJson = localStorage.getItem('asetukset');
 var asetukset = JSON.parse(asetuksetJson);
@@ -78,7 +81,8 @@ function myMessage() {
     var odota = document.createElement("P");  
     odota.innerText = "Voit aseta laskurin uudelleen 10 sekunnin kuluttua";         
     document.getElementById("messageBlock").appendChild(odota);            
-    localStorage.removeItem('avain');
+    //localStorage.removeItem('avain');
+    localStorage.setItem('avain', 0);
 }
 
 

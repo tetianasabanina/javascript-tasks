@@ -3,10 +3,15 @@ preAsetukset();
 
 // getting data from configuration page
 //document.getElementById('btn').onsubmit = saadaAsetukset();
-//document.getElementById('btn').addEventListener("click", saadaAsetukset);
-document.getElementById('config-form').addEventListener("click", saadaAsetukset);
+//document.getElementById('btn').addEventListener("submit", saadaAsetukset);
+
+//document.getElementById('config-form').addEventListener("submit", saadaAsetukset);//redirecting to itselfs;
+//document.getElementById('btn').onclick = function() {saadaAsetukset}; //redirecting to itselfs;
+
+console.log("exited function.");
 
 function saadaAsetukset() {
+    console.log("entering saada asetukset2");
     preventSubmit();               // lomaketta ei lähetetä
     var otsikko = document.getElementById("otsikko").value;
     var viesti = document.getElementById('viesti').value;
@@ -18,8 +23,27 @@ function saadaAsetukset() {
     pvm = Date.parse(pvm) + aikaSec + timezoneOffset;
     pvm = new Date(pvm);
     console.log(pvm);
-    var todayIs = new Date();
+    validointi(otsikko, viesti, pvm, dayOnly, aika);
+        window.location = "index.html";
+        return false;
+    }
 
+function preAsetukset() {
+    var ensAsetukset = JSON.parse(localStorage.getItem('asetukset'));
+    document.getElementById("otsikko").value = ensAsetukset.otsikko;
+    document.getElementById("viesti").value = ensAsetukset.viesti;
+    document.getElementById("pvm").value = localStorage.getItem('päivä');
+    document.getElementById("aika").value = localStorage.getItem('aika')
+}
+
+function preventSubmit() {
+document.getElementById("btn").addEventListener("click", function(event){
+    event.preventDefault()
+  });
+}
+
+function validointi(otsikko, viesti, pvm, dayOnly, aika) {
+    var todayIs = new Date();
     if (pvm <= todayIs || pvm == "Invalid Date") {
         alert("Päivämääräsi on vanhentunut tai ei asetettu");
     } else {
@@ -29,24 +53,7 @@ function saadaAsetukset() {
         var jsonOlio = JSON.stringify(olio);
         localStorage.setItem('asetukset', jsonOlio);
         localStorage.setItem('avain', "taletettu");
-        var link = "index.html";
-        redirect(link);
     }
-}
-
-function preAsetukset() {
-    var ensAsetukset = JSON.parse(localStorage.getItem('asetukset'));
-    document.getElementById("otsikko").value = ensAsetukset.otsikko;
-    document.getElementById("viesti").value = ensAsetukset.viesti;
-    document.getElementById("pvm").value = localStorage.getItem('päivä');
-    document.getElementById("aika").value = localStorage.getItem('aika')
-    
-}
-
-function preventSubmit() {
-document.getElementById("btn").addEventListener("click", function(event){
-    event.preventDefault()
-  });
 }
 
 function muodostaOlio(formOtsikko, formPvm, formViesti) {

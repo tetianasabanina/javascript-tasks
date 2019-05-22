@@ -11,7 +11,7 @@
 
 <body>
     <h1>Asetukset</h1>
-    <form id="config-form">
+    <form id="config-form" onsubmit="return saadaAsetukset();">
         <fieldset>
             <legend>Syötä asetukset:</legend>
             <div class="field">
@@ -31,7 +31,7 @@
             <div>
                 <input id="viesti" name="message" type="text" required>
             </div>
-            <div class="field">
+            <div class="field"> 
                 <button id="btn" type="submit">Aseta</button>
             </div>
         </fieldset>
